@@ -39,6 +39,23 @@
                                 </div>
                             @enderror
                         </div>
+
+                        {{-- Tipo --}}
+                        <div class="my-4">
+                            <label class="d-block" for="type_id">Tipo:</label>
+
+                            <select name="type_id" id="type_id">
+                                <option value="">
+                                    Scegli il tipo...
+                                </option>
+    
+                                @foreach ($types as $type)
+                                    <option value="{{ $type->id }}">
+                                        {{ $type->name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
             
                         <div class="mb-3">
                             <label class="d-block" for="description">Descrizione:</label>
