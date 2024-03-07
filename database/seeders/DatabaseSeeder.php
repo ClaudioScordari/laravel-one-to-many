@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 
 // Models
 use App\Models\Project;
+use App\Models\Type;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,6 +17,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
+            TypeSeeder::class,
             ProjectSeeder::class
         ]);
     }

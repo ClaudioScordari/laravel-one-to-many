@@ -11,6 +11,11 @@
                         {{ $project->name }}
                     </h1>
 
+                    {{-- Tipo del progetto --}}
+                    <h2 class="my-3">
+                        Type: {{ $project->type->name }}
+                    </h2>
+
                     <p>
                         {{ $project->description }}
                     </p>

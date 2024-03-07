@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 
 // Models
 use App\Models\Project;
+use App\Models\Type;
 
 class ProjectSeeder extends Seeder
 {
@@ -20,7 +21,8 @@ class ProjectSeeder extends Seeder
         for ($i=0; $i < 10; $i++) { 
             $project = Project::create([
                 'name' => fake()->word(),
-                'description' => fake()->text()
+                'description' => fake()->text(),
+                'type_id' => Type::inRandomOrder()->first()->id
             ]);
         }
     }
